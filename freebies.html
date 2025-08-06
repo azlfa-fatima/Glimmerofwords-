@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azlfa Fatima’s Freebies</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========== Root Variables ========== */
+    :root {
+      --accent: #b85c70;
+      --accent-dark: #8d2646;
+      --rose: #fff5f4;
+      --dark: #2e2e2e;
+      --light-bg: #fffaf8;
+    }
+
+    /* ========== Reset & Base Styles ========== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark);
+    }
+
+    /* ========== Navigation ========== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--accent);
+      padding: 1rem 2rem;
+      color: white;
+    }
+
+    nav .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: pink;
+    }
+
+    /* ========== Header ========== */
+    header {
+      background-color: var(--rose);
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    /* ========== Container Layout ========== */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    /* ========== Freebies Grid (Main Section) ========== */
+    .main {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--accent-dark);
+    }
+
+    .download-btn {
+      margin-top: auto;
+      padding: 0.6rem 1rem;
+      background-color: var(--accent-dark);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #6a1e36;
+    }
+
+    /* ========== Sidebar ========== */
+    .sidebar {
+      flex: 1;
+    }
+
+    .search-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-dark);
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    /* ========== Footer ========== */
+    footer.custom-footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-top h2 {
+      font-family:'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      margin: 0 0.5rem;
+    }
+
+    .social-links img {
+      width: 28px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 1rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-books img {
+      height: 350px;
+      border-radius: 8px;
+      margin: 0 0.5rem;
+    }
+
+    .footer-quote {
+      margin-top: 2rem;
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  /* ===== Navbar adjustments ===== */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav .logo {
+    order: -1;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.8rem 1rem;
+    padding: 0;
+  }
+
+  nav ul li {
+    flex: 1 1 45%;
+  }
+
+  /* Hide "Contact" on mobile */
+  nav ul li:last-child {
+    display: none;
+  }
+
+  /* ===== Sidebar search box moves to top ===== */
+  .sidebar {
+    order: -1;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-box {
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  /* Freebie grid layout */
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-books img {
+    height: 180px;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav .logo {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items in one row */
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  /* Hide "Contact" */
+  nav ul li:last-child {
+    display: none;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="fade-in" style="position: sticky; top: 0; z-index: 1000;">
+    <div class="logo">Azlfa Fatima</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="./blog.html">Blogs</a></li>
+      <li><a href="./freebies.html">Freebies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= HEADER ================= -->
+  <header> 
+    <h1>Grap Freebie</h1>
+    <p>Download worksheets, writing prompts, and resources to fuel your creativity ✨</p>
+  </header>
+
+  <!-- ================= MAIN & SIDEBAR ================= -->
+  <div class="container">
+    <main class="main" id="freebieList">
+      <!-- Freebie Card 1 -->
+      <div class="card">
+        <img src="comingsoon.png" alt="Character Workbook">
+        <div class="card-content">
+          <div class="card-title">Character Development Sheet</div>
+          <p>Over 100 pages of character prompts and profiles.</p>
+          <button class="download-btn">Download Free</button>
+        </div>
+      </div>
+
+      <!-- Freebie Card 2 -->
+      <div class="card">
+        <img src="comingsoon.png" alt="Plot Workbook">
+        <div class="card-content">
+          <div class="card-title">Plot Structure Guide</div>
+          <p>85+ pages to help you map out your story.</p>
+          <button class="download-btn">Download Free</button>
+        </div>
+      </div>
+
+      <!-- Freebie Card 3 -->
+      <div class="card">
+        <img src="comingsoon.png" alt="Worldbuilding Workbook">
+        <div class="card-content">
+          <div class="card-title">Worldbuilding Journal</div>
+          <p>Build your fantasy world from scratch with guided prompts.</p>
+          <button class="download-btn">Download Free</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="search-box">
+        <h3>Search Freebies</h3>
+        <input type="text" id="searchInput" placeholder="e.g. character, plot..." />
+      </div>
+    </aside>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+      <footer class="custom-footer fade-up">
+      <div class="footer-top">
+        <h2>Azlfa Fatima</h2>
+        <div class="social-links">
+
+          <a href="https://www.instagram.com/glimmerofwords/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="https://www.pinterest.com/glimmerofwords"><img src="pinterest-round-white-icon.webp" alt="Pinterest"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/glimmerofwords/">Instagram Journey</a></li>
+            <li><a href="blog.html">Bonus Content</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-books">
+        <img src="footer1.jpg" alt="Follow us" />
+        <img src="footer2.jpg" alt="Join Us" />
+      </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="freebies.html">Freebies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="footer-quote">"You feel like sunlight through lace-soft, golden, and almost to beautiful to hold."</p>
+      <p class="copyright">&copy; 2025 Azlfa Fatima. All Rights Reserved.</p>
+    </footer>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    // Freebie Search Filter
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+
+      cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        const text = card.querySelector('p').textContent.toLowerCase();
+
+        if (title.includes(query) || text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

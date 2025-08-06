@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Azlfa Fatima</title>
+<link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #b85c70;
+      --accent-dark: #8d2646;
+      --rose: #fff5f4;
+      --dark: #2e2e2e;
+      --light-bg: #fffaf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--accent);
+      padding: 1rem 2rem;
+      color: white;
+    }
+
+    nav .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: pink;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      max-width: 600px;
+      background: white;
+      margin: 4rem auto;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-container h1 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-container p {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: var(--accent);
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: var(--accent-dark);
+    }
+
+    /* Footer */
+    footer.custom-footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-top h2 {
+      font-family:'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      margin: 0 0.5rem;
+    }
+
+    .social-links img {
+      width: 28px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 1rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-books img {
+      height: 350px;
+      border-radius: 8px;
+      margin: 0 0.5rem;
+    }
+
+    .footer-quote {
+      margin-top: 2rem;
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+   @media (max-width: 480px) {
+  /* ========== Navbar Styling ========== */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  nav .logo {
+    order: -1;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items in one row */
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0;
+    justify-items: center;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  /* ========== Hide "About" and "Contact" Links ========== */
+  nav ul li:nth-child(5) {
+    display: none;
+  }
+
+  /* ========== Footer Styling ========== */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-books img {
+    height: 180px;
+    margin: 0.5rem 0;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav>
+    <div class="logo">Azlfa Fatima</div>
+    <ul>
+      <li><a href="./home.html">Home</a></li>
+      <li><a href="./blog.html">Blogs</a></li>
+      <li><a href="./freebies.html">Freebies</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact-container">
+    <h1>Get in Touch</h1>
+    <p>Have a question, collaboration idea, or just want to say hello? I’d love to hear from you!</p>
+    <form action="#" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">
+       <a href="https://forms.gle/N32yvb9hZyfpZUrv9"target="_blank" 
+   rel="noopener noreferrer"
+   style="text-decoration: none; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block;">
+        Send Message
+      </a></button>
+    </form>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+      <footer class="custom-footer fade-up">
+      <div class="footer-top">
+        <h2>Azlfa Fatima</h2>
+        <div class="social-links">
+
+          <a href="https://www.instagram.com/glimmerofwords/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="https://www.pinterest.com/glimmerofwords"><img src="pinterest-round-white-icon.webp" alt="Pinterest"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/glimmerofwords/">Instagram Journey</a></li>
+            <li><a href="blog.html">Bonus Content</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-books">
+        <img src="footer1.jpg" alt="Follow us" />
+        <img src="footer2.jpg" alt="Join Us" />
+      </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="freebies.html">Freebies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="footer-quote">"You feel like sunlight through lace-soft, golden, and almost to beautiful to hold."</p>
+      <p class="copyright">&copy; 2025 Azlfa Fatima. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

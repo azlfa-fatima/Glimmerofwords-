@@ -1,0 +1,270 @@
+<!-- ================= DOCUMENT STRUCTURE ================= -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>glimmerofwords</title>
+
+    <!-- ========== Fonts & Styles ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" type="image/png">
+
+  </head>
+
+  <body>
+    <!-- ========== JavaScript ========== -->
+    <script src="index.js"></script>
+
+ <!-- ================= ANNOUNCEMENT BANNER ================= -->
+    <div class="announcement-banner">
+  <a href="freebies.html" class="announcement-text">
+    🎁 Grab Freebies — <strong>Limited Offer!</strong>
+  </a>
+</div>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="fade-in" style="position: sticky; top: 0; z-index: 1000;">
+      <div class="logo">Azlfa Fatima</div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="./blog.html">Blogs</a></li>
+        <li><a href="./freebies.html">Freebies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <section class="intro-banner">
+  <div class="intro-content">
+    <h1>Hi, I’m Azlfa Fatima</h1>
+    <h2>Teen Author of Stories That Feel Like Home</h2>
+    <p>I write emotional, heartfelt stories about friendship, love, and growing up — for dreamers like you.</p>
+    <div class="intro-buttons">
+      <a href="about.html" class="btn-primary">About Me</a>
+      <a href="https://forms.gle/PZk4SDRYEXaoPkgMA" class="btn-secondary">Get Updates</a>
+    </div>
+  </div>
+</section>
+
+
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>🌸 Join Our Newsletter</h2>
+    <p>Get romantic writing tips & cozy updates straight to your inbox!</p>
+    <input type="email" placeholder="Your email address" />
+    <a href="https://forms.gle/PZk4SDRYEXaoPkgMA" class="glow-btn-link">
+    <button class="glow">Subscribe</button>
+    </a>
+  </div>
+</div>
+
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero fade-in">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>My Debut Novel: <em>Thirty Things Map We Made</em></h1>
+          <p>A story of three friends on a journey of freedom, friendship, and finding purpose—told through 30 unforgettable experiences.</p>
+          <p><strong>Currently in progress. Be part of the journey from the start.</strong></p>
+          <div class="hero-buttons">
+  <a href="noval.html" class="btn solid">📄 Read the Blurb</a>
+  <a href="noval.html" class="btn outline">📬 Get Updates</a>
+</div>
+
+        </div>
+        <div class="hero-image">
+          <img src="debutnoval.jpg" alt="Thirty Things Map We Made Cover Teaser" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUOTE CAROUSEL ================= -->
+    <section class="quote-carousel fade-in-up">
+      <h2 class="fancy-heading">Words That Inspire Me</h2>
+
+      <div class="carousel-wrapper">
+        <blockquote class="quote active">"Books are a uniquely portable magic." – Stephen King</blockquote>
+        <blockquote class="quote">"I write to discover what I know." – Flannery O’Connor</blockquote>
+        <blockquote class="quote">"Writing is the painting of the voice." – Voltaire</blockquote>
+
+        <div class="carousel-arrows">
+          <span id="prev">&#10094;</span>
+          <span id="next">&#10095;</span>
+        </div>
+      </div>
+
+      <div class="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </section>
+
+   
+    <!-- ================= TYPEWRITER ================= -->
+    <section class="typewriter-section fade-in">
+      <h2 class="typewriter-heading">
+        I write stories about... <span id="typewriter-text"></span>
+      </h2>
+    </section>
+
+    <!-- ================= BLOG SECTION ================= -->
+    <section class="blog-section fade-in-up">
+      <div class="blog-intro">
+        <h2>I LOVE TO BLOG</h2>
+        <p>I also love sharing writing tips, my journey, and the magic behind storytelling.</p>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Blog Card 1 -->
+        <div class="blog-card">
+          <img src="blog1.jpg" alt="Blog 1" />
+          <div class="blog-content">
+            <h3>5 Lessons I Learned Writing My First Novel</h3>
+            <p>From idea to draft, here are the powerful takeaways I wish I knew earlier.</p>
+            <button>
+      <a href="blog1.html"
+       target="_blank" 
+     rel="noopener noreferrer"
+     style="text-decoration: none; color: inherit; display: inline-block; width: 100%; height: 100%;"
+    >
+    READ MORE
+        </a> </button>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="blog-card">
+          <img src="blog2.jpg" alt="Blog 2" />
+          <div class="blog-content">
+            <h3>My Favorite Writing Tools</h3>
+            <p>Discover the apps, websites, and notebooks I use to stay inspired & productive.</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="blog-card">
+          <img src="blog3.jpg" alt="Blog 3" />
+          <div class="blog-content">
+            <h3>How to Beat Writer’s Block</h3>
+            <p>Simple strategies that actually helped me write again—even on bad days.</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="newsletter fade-in-delay">
+      <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.2;">
+        <source src="newletter.mp4" type="video/mp4" />
+      </video>
+
+      <div class="newsletter-box">
+        <div class="newsletter-text">
+          <h2>JOIN THE NEWSLETTER</h2>
+          <p>When <em><strong>Thirty Things Map We Made</strong></em> is released, you'll be first in line. 
+      Get sneak peeks, behind-the-scenes stories, and exclusive content — all before the rest of the world.
+    </p>
+    <p><strong>Sign up now</strong> to be part of the journey from the very beginning.</p>
+          <a href="https://forms.gle/PZk4SDRYEXaoPkgMA" class="glow-btn-link">
+  <button class="glow">SIGN UP NOW</button>
+</a>
+
+        </div>
+        <div class="newsletter-img">
+          <img src="newsletterpic.jpg" alt="Newsletter Phone Image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BIO SECTION ================= -->
+<section class="bio-section fade-in-up">
+  <div class="bio-container">
+    <div class="bio-content">
+      <h2>MEET THE MIND BEHIND THE <em>MAGIC</em></h2>
+      <p>
+        Azlfa Fatima is a rising voice in contemporary fiction, crafting heartfelt stories that echo with emotion, hope, and quiet strength. Her work delicately weaves together themes of friendship, resilience, identity, and the messy beauty of growing up — all told through a lens of rich, lyrical prose.
+        <br><br>
+        With a natural gift for storytelling and an eye for life’s small, soul-stirring moments, Azlfa invites readers to feel deeply, dream freely, and believe in second chances. Her debut novel, <em>Thirty Things Map We Made</em>, is not just a story — it’s a map of becoming, healing, and finding your way home.
+      </p>
+      <button>
+        <a href="about.html" target="_blank" 
+     rel="noopener noreferrer"
+     style="text-decoration: none; color: inherit; display: inline-block; width: 100%; height: 100%;">
+        LEARN MORE
+        </a>
+      </button>
+    </div>
+    <div class="bio-image">
+      <img src="me.jpg" alt="Azlfa Fatima Photo" />
+    </div>
+  </div>
+</section>
+
+
+    <!-- ================= QUOTE SECTION ================= -->
+    <section class="quote-section fade-in-delay">
+      <h3>“A soul-stirring ride full of laughter, wanderlust, and late-night talks. This book made me want to pack a bag and find myself all over again.”</h3>
+      <p>— Riya Malik, author of When We Were Seventeen</p>
+<button>
+  <a href="https://www.instagram.com/itsriyamalik?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     style="text-decoration: none; color: inherit; display: inline-block; width: 100%; height: 100%;">
+    READ NOW
+  </a>
+</button>
+
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="custom-footer fade-up">
+      <div class="footer-top">
+        <h2>Azlfa Fatima</h2>
+        <div class="social-links">
+
+          <a href="https://www.instagram.com/glimmerofwords/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="https://www.pinterest.com/glimmerofwords"><img src="pinterest-round-white-icon.webp" alt="Pinterest"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/glimmerofwords/">Instagram Journey</a></li>
+            <li><a href="blog.html">Bonus Content</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-books">
+        <img src="footer1.jpg" alt="Keep Conncted" />
+        <img src="footer2.jpg" alt="Join news" />
+      </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="freebies.html">Freebies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="footer-quote">"You feel like sunlight through lace-soft, golden, and almost to beautiful to hold."</p>
+      <p class="copyright">&copy; 2025 Azlfa Fatima. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

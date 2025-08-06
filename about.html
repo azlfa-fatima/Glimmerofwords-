@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Azlfa Fatima</title>
+<link rel="icon" href="favicon.png" type="image/png">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #b85c70;
+      --accent-dark: #8d2646;
+      --rose: #fff5f4;
+      --dark: #2e2e2e;
+      --light-bg: #fffaf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark);
+    }
+
+    /* ========= NAVIGATION ========= */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--accent);
+      padding: 1rem 2rem;
+      color: white;
+    }
+
+    nav .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: pink;
+    }
+
+    /* ========= MAIN CONTENT LAYOUT ========= */
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .about-section {
+      flex: 2;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .author-image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+    }
+
+    .author-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .author-bio {
+      flex: 2;
+    }
+
+    .author-bio h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--accent-dark);
+      margin-bottom: 1rem;
+    }
+
+    .author-bio p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .author-facts {
+      margin-top: 1.5rem;
+    }
+
+    .author-facts h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .author-facts ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .author-facts li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .author-facts li::before {
+      content: "✨";
+      position: absolute;
+      left: -1rem;
+    }
+
+    /* ========= SIDE PANEL ========= */
+    .side-panel {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .side-panel blockquote.instagram-media {
+      margin: 0 auto;
+    }
+
+    /* ========= FOOTER ========= */
+    footer.custom-footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-top h2 {
+      font-family:'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      margin: 0 0.5rem;
+    }
+
+    .social-links img {
+      width: 28px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 1rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-books img {
+      height: 350px;
+      border-radius: 8px;
+      margin: 0 0.5rem;
+    }
+
+    .footer-quote {
+      margin-top: 2rem;
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .author-facts ul {
+        text-align: left;
+      }
+
+      .side-panel {
+        margin-top: 2rem;
+      }
+    }
+
+   @media (max-width: 480px) {
+  /* ========== Navbar Styling ========== */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  nav .logo {
+    order: -1;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items in one row */
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0;
+    justify-items: center;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  /* ========== Hide "About" and "Contact" Links ========== */
+  nav ul li:nth-child(4) {
+    display: none;
+  }
+
+  /* ========== Footer Styling ========== */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-books img {
+    height: 180px;
+    margin: 0.5rem 0;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="fade-in" style="position: sticky; top: 0; z-index: 1000;">
+    <div class="logo">Azlfa Fatima</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="./blog.html">Blogs</a></li>
+      <li><a href="./freebies.html">Freebies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== MAIN CONTENT + SIDEPANEL ========== -->
+  <div class="main-content">
+    
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="author-image">
+        <img src="me.jpg" alt="Azlfa Fatima">
+      </div>
+      <div class="author-bio">
+        <h1>About Azlfa Fatima</h1>
+        <p>
+          Hello, I’m Azlfa — a writer, creator, and lover of all things aesthetic and bookish! I specialize in crafting engaging digital content for aspiring authors and creative souls. Whether you're building a fictional world, developing deep characters, or just looking for inspiration — I’ve got you covered.
+        </p>
+        <p>
+          When I’m not writing or designing freebies, I’m either journaling with a warm chai latte, sketching book cover ideas, or dreaming up new adventures for my characters. Creativity is my language, and I love helping others tell their stories.
+        </p>
+
+        <div class="author-facts">
+          <h2>Fun Facts:</h2>
+          <ul>
+            <li>✨ I started writing stories at age 13.</li>
+            <li>✨ My favorite genre is mafia romance + thrillers.</li>
+            <li>✨ I design all my freebies & templates myself.</li>
+            <li>✨ I love cats, starry nights, and old bookstores.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side Panel -->
+    <aside class="side-panel">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DMCwRapoZKo/?utm_source=ig_embed&amp;utm_campaign=loading"
+        data-instgrm-version="14"
+        style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px rgba(0,0,0,0.5), 0 1px 10px rgba(0,0,0,0.15); margin: 1px auto; max-width: 100%; min-width: 280px; width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </aside>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+    <footer class="custom-footer fade-up">
+      <div class="footer-top">
+        <h2>Azlfa Fatima</h2>
+        <div class="social-links">
+
+          <a href="https://www.instagram.com/glimmerofwords/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="https://www.pinterest.com/glimmerofwords"><img src="pinterest-round-white-icon.webp" alt="Pinterest"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/glimmerofwords/">Instagram Journey</a></li>
+            <li><a href="blog.html">Bonus Content</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-books">
+        <img src="footer1.jpg" alt="Follow us" />
+        <img src="footer2.jpg" alt="Join Us" />
+      </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="freebies.html">Freebies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="footer-quote">"You feel like sunlight through lace-soft, golden, and almost to beautiful to hold."</p>
+      <p class="copyright">&copy; 2025 Azlfa Fatima. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

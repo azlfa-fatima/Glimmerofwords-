@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Things I Learned While Writing My First Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff9f9;
+      color: #333;
+      line-height: 1.7;
+    }
+    .blog-wrapper {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    /* ========== Navigation ========== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A26769;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+nav .logo {
+  font-family: 'Cinzel', cursive;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: pink;
+  
+}
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      background-color: #fff0f4;
+    }
+    .category-label {
+      background-color: #e91e63;
+      color: white;
+      padding: 0.4rem 1rem;
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: bold;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #2e1e2e;
+      margin-bottom: 1rem;
+    }
+    .meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      color: #777;
+    }
+    .meta-item i {
+      margin-right: 0.5rem;
+      color: #a03a58;
+    }
+    .img-section {
+      width: 100%;
+      height: 400px;
+      background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba') center/cover no-repeat;
+      margin-top: 2rem;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+    }
+    .container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #a03a58;
+      margin-top: 3rem;
+    }
+    .container p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+    .fancy-quote {
+      font-style: italic;
+      background-color: #fff0f4;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid #a03a58;
+      margin: 1.5rem 0;
+      color: #6d3c46;
+    }
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem 0 1rem;
+      font-size: 0.95rem;
+      color: #a03a58;
+    }
+    .post-nav a {
+      text-decoration: none;
+      color: #a03a58;
+    }
+    .author-box {
+      display: flex;
+      align-items: center;
+      background-color: #fbe5ea;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .author-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+    }
+    .author-box div {
+      flex: 1;
+    }
+    .author-box h3 {
+      margin-bottom: 0.5rem;
+      color: #3e1f47;
+    }
+    .author-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+footer.custom-footer {
+  background:#1a1a1a;
+  color: rgb(251, 251, 251);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-top h2 {
+  font-family:'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+}
+
+.social-links img {
+  width: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-books img {
+  height: 350px;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+}
+
+.footer-quote {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--rose);
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+
+/* 🌸 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav .logo {
+    order: -1;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.8rem 1rem;
+    padding: 0;
+  }
+
+  nav ul li {
+    flex: 1 1 45%;
+  }
+
+  /* Hide "Contact" on mobile */
+  nav ul li:last-child {
+    display: none;
+  }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav .logo {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  nav ul li {
+    flex: 1 1 25%; /* 4 items in one line */
+    min-width: 0;
+    text-align: center;
+  }
+
+  /* Hide only the 5th (Contact) link */
+  nav ul li:nth-child(5) {
+    display: none;
+  }
+}
+
+
+  .intro-content h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .intro-content h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .blog-wrapper {
+    margin: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .post-nav {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .author-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-box img {
+    margin: 0 auto 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-books img {
+    height: 180px;
+    margin: 0.5rem 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+        <!-- ================= NAVIGATION ================= -->
+    <nav class="fade-in" style="position: sticky; top: 0; z-index: 1000;">
+      <div class="logo">Azlfa Fatima</div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="./blog.html">Blogs</a></li>
+        <li><a href="./freebies.html">Freebies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  <div class="blog-wrapper">
+    <header>
+      <div class="category-label">WRITING TIPS</div>
+      <h1>5 Things I Learned While Writing My First Book</h1>
+      <div class="meta">
+        <div class="meta-item"><i class="fa-solid fa-calendar-days"></i> August 3, 2025</div>
+        <div class="meta-item"><i class="fa-solid fa-user"></i> Azlfa Fatima</div>
+        <div class="meta-item"><i class="fa-regular fa-clock"></i> 7 min read</div>
+      </div>
+    </header>
+
+    <div class="img-section"></div>
+
+    <div class="container">
+      <p><section class="blog-post" style="font-family: 'Georgia', serif; background-color: #fff8f6; color: #3a2c2c; padding: 2rem; max-width: 800px; margin: auto; line-height: 1.8;">
+  
+  <h1 style="font-size: 2.5rem; color: #a66b6b; text-align: center; margin-bottom: 1rem;">5 Things I Learned While Writing My First Book</h1>
+  
+  <p><em>Writing a book is not only a creative journey—it’s a pleasure, and it was a transformational one.</em></p>
+  
+  <p>I started out writing with a full range of ideas, thoughts, and imagination. My head was full of doubt and curiosity. I didn't know where my story would take me or how it would shape me. But this experience helped me deliver my words—my story—to the world.</p>
+
+  <p>It was hard for me to begin, and even harder to stay consistent. Writing all day and imagining all night made me a teen writer. A writer who writes with passion. A writer whose dream is to become a <strong>New York Times bestselling author</strong>.</p>
+
+  <p>It took me days, weeks, months—even years—to come up with a successful idea. And if you're starting your writing journey or feel stuck along the way, here are five lessons I learned while writing my first book—lessons I wish someone had told me earlier.</p>
+
+  <hr style="margin: 2rem 0; border: none; border-top: 1px dashed #cba0a0;">
+
+  <h2 style="color: #d16b6b;">1. You Don’t Need to Know Everything to Begin</h2>
+  <p>When I first started, I believed that having a perfect idea and strong plotting were essential. I thought software like Scrivener was necessary for writing a “real” book. I also doubted myself because I had no degree, award, or official certificate.</p>
+
+  <p>I feared rejection and judgement. I wondered—<em>What if nobody reads it? What if someone calls it trash?</em></p>
+
+  <p>But I started with simple tools like MS Word. Later, I discovered <strong>Google Docs</strong>, which was a game-changer. It allowed me to write from anywhere, save automatically, and organize my chapters easily.</p>
+
+  <p>I learned that all you need is the <strong>willingness to start</strong>. Write consistently—even if it's messy or imperfect. That’s what gets you published.</p>
+
+  <h2 style="color: #d16b6b;">2. Writer’s Block Isn’t the Enemy—Perfectionism Is</h2>
+  <p>I used to think writer’s block meant I wasn’t a real writer. But I realized I had ideas—I just didn’t trust them. The real enemy was perfectionism.</p>
+
+  <p>I overcame it by writing freely for 19 minutes, setting timers, and using tools like <strong>NaNoWriMo</strong>. I broke my goals into small pieces to avoid overwhelm.</p>
+
+  <p><strong>Writer’s block doesn’t mean you’re not a writer. It means you’re human.</strong> Let your first draft be messy. You can fix it later.</p>
+
+  <h2 style="color: #d16b6b;">3. Writing Is Emotional Work—Take Care of Yourself</h2>
+  <p>Writing felt like an emotional rollercoaster. Some days I was unstoppable. Other days, I felt broken and alone.</p>
+
+  <p>I compared myself to others. I pushed myself hard and burned out. What saved me? <strong>Treating my creativity with care, not pressure.</strong></p>
+
+  <p>I took breaks. I journaled. I walked. I connected with other writers and found that I wasn’t alone. Writing is a relationship—with your imagination, discipline, and yourself. It needs rest, kindness, and love to grow.</p>
+
+  <h2 style="color: #d16b6b;">4. Editing Is Where the Real Writing Happens</h2>
+  <p>The first draft felt like dragging words through mud. But editing? That’s when the story came alive.</p>
+
+  <p>I couldn’t afford professional editors. So I leaned on friends, family, and volunteers. I rewrote, cut scenes, polished dialogues, and deepened characters. <strong>Editing takes more time than the first draft—but it makes all the difference.</strong></p>
+
+  <p>It hurt when beta readers pointed out mistakes, but I knew their feedback was helping me grow. That’s part of becoming a better writer.</p>
+
+  <h2 style="color: #d16b6b;">5. You’re Not Alone—Every Writer Struggles</h2>
+  <p>I used to feel isolated. I thought I was the only one facing doubts, burnout, and dry spells.</p>
+
+  <p>But every writer you admire has struggled too. Behind every published book are <strong>sleepless nights, edits, self-doubt, and persistence</strong>.</p>
+
+  <p>Connecting with other writers made me realize I wasn’t alone. Their honesty inspired me to keep going—even when it felt impossible.</p>
+
+  <p><strong>Writing is hard—but it teaches you bravery, patience, and resilience.</strong></p>
+
+  <hr style="margin: 2rem 0; border: none; border-top: 1px dashed #cba0a0;">
+
+  <p><strong>Writing my first book transformed me.</strong> It shaped who I am. It helped me explore my limits and strengths. And even now, I’m still learning, still growing, and—most importantly—still writing.</p>
+
+  <p>If you’re on your writing journey, I hope these lessons help you feel less alone. Maybe they’ll comfort you. Maybe they’ll inspire you to keep going.</p>
+
+  <blockquote style="margin: 2rem 0; padding: 1rem; background-color: #ffecec; border-left: 5px solid #d16b6b;">
+    <p style="margin: 0; font-style: italic;">Remember this: your voice matters. Your story deserves to be told. You don’t need to be perfect—you just need to begin.</p>
+  </blockquote>
+
+</section>
+</p>
+    </div>
+
+    <div class="container post-nav">
+      <a href="#"><i class="fa-solid fa-chevron-left"></i> Previous Post</a>
+      <a href="#">Next Post <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div class="container author-box">
+      <img src="AUTHOR.jpg" alt="Author Photo">
+      <div>
+        <h3>Azlfa Fatima</h3>
+        <p>A teen writer with a passion for storytelling, growth, and sharing real-life writing journeys. Dreaming big, writing bigger.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+<!-- ================= FOOTER ================= -->
+    <footer class="custom-footer fade-up">
+      <div class="footer-top">
+        <h2>Azlfa Fatima</h2>
+        <div class="social-links">
+
+          <a href="https://www.instagram.com/glimmerofwords/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="https://www.pinterest.com/glimmerofwords"><img src="pinterest-round-white-icon.webp" alt="Pinterest"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/glimmerofwords/">Instagram Journey</a></li>
+            <li><a href="blog.html">Bonus Content</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-books">
+        <img src="footer1.jpg" alt="Keep Conncted" />
+        <img src="footer2.jpg" alt="Join news" />
+      </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="freebies.html">Freebies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="footer-quote">"You feel like sunlight through lace-soft, golden, and almost to beautiful to hold."</p>
+      <p class="copyright">&copy; 2025 Azlfa Fatima. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
