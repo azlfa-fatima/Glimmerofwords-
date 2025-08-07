@@ -1,0 +1,8 @@
+# robots.txt for glimmerofwords.netlify.app
+
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow:
+
+# Sitemap (if you have one)
+Sitemap: https://glimmerofwords.netlify.app/sitemap.xml
