@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whisper Between the Stars – Out This Sunday!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff9f9;
+      color: #333;
+      line-height: 1.7;
+    }
+    .blog-wrapper {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    /* ========== Navigation ========== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A26769;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+nav .logo {
+  font-family: 'Cinzel', cursive;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: pink;
+  
+}
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      background-color: #fff0f4;
+    }
+    .category-label {
+      background-color: #e91e63;
+      color: white;
+      padding: 0.4rem 1rem;
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: bold;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #2e1e2e;
+      margin-bottom: 1rem;
+    }
+    .meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      color: #777;
+    }
+    .meta-item i {
+      margin-right: 0.5rem;
+      color: #a03a58;
+    }
+    .img-section {
+      width: 100%;
+      height: 400px;
+      background: url("Album.jpg") center/cover no-repeat;
+      margin-top: 2rem;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+    }
+    .container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #a03a58;
+      margin-top: 3rem;
+    }
+    .container p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+    .fancy-quote {
+      font-style: italic;
+      background-color: #fff0f4;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid #a03a58;
+      margin: 1.5rem 0;
+      color: #6d3c46;
+    }
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem 0 1rem;
+      font-size: 0.95rem;
+      color: #a03a58;
+    }
+    .post-nav a {
+      text-decoration: none;
+      color: #a03a58;
+    }
+    .author-box {
+      display: flex;
+      align-items: center;
+      background-color: #fbe5ea;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .author-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+    }
+    .author-box div {
+      flex: 1;
+    }
+    .author-box h3 {
+      margin-bottom: 0.5rem;
+      color: #3e1f47;
+    }
+    .author-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+footer.custom-footer {
+  background:#1a1a1a;
+  color: rgb(251, 251, 251);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-top h2 {
+  font-family:'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+}
+
+.social-links img {
+  width: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-books img {
+  height: 350px;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+}
+
+.footer-quote {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--rose);
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+
+/* 🌸 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav .logo {
+    order: -1;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.8rem 1rem;
+    padding: 0;
+  }
+
+  nav ul li {
+    flex: 1 1 45%;
+  }
+
+  /* Hide "Contact" on mobile */
+  nav ul li:last-child {
+    display: none;
+  }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav .logo {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  nav ul li {
+    flex: 1 1 25%; /* 4 items in one line */
+    min-width: 0;
+    text-align: center;
+  }
+
+  /* Hide only the 5th (Contact) link */
+  nav ul li:nth-child(5) {
+    display: none;
+  }
+}
+
+
+  .intro-content h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .intro-content h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .blog-wrapper {
+    margin: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .post-nav {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .author-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-box img {
+    margin: 0 auto 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-books img {
+    height: 180px;
+    margin: 0.5rem 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+        <!-- ================= NAVIGATION ================= -->
+    <nav class="fade-in" style="position: sticky; top: 0; z-index: 1000;">
+      <div class="logo">Azlfa Fatima</div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="./blog.html">Blogs</a></li>
+        <li><a href="./freebies.html">Freebies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  <div class="blog-wrapper">
+    <header>
+      <div class="category-label">Productivity</div>
+      <h1>🎶 Whisper Between the Stars – Out This Sunday!</h1>
+      <div class="meta">
+        <div class="meta-item"><i class="fa-solid fa-calendar-days"></i> August 16, 2025</div>
+        <div class="meta-item"><i class="fa-solid fa-user"></i> Azlfa Fatima</div>
+        <div class="meta-item"><i class="fa-regular fa-clock"></i> 3 min read</div>
+      </div>
+    </header>
+
+    <div class="img-section"></div>
+
+    <div class="container">
+      <p><section class="blog-post" style="font-family: 'Georgia', serif; background-color: #fff8f6; color: #3a2c2c; padding: 2rem; max-width: 800px; margin: auto; line-height: 1.8;">
+  
+  <h1 style="font-size: 2.5rem; color: #a66b6b; text-align: center; margin-bottom: 1rem;">My Debut Album Drops August 17th!</h1>
+  
+ <p><em>On 17th August 2025, a dream I’ve carried for so long is finally becoming reality—my debut album is officially out.</em></p>
+  
+  <p>Even as I write these words, I feel a mix of excitement, nervousness, and pure gratitude. This isn’t just an album; it’s a piece of my heart, crafted with dedication, sleepless nights, and endless focus over the past month.</p>
+
+  <hr>
+
+  <h2>The Journey Behind the Album</h2>
+  <p>When I first started working on this project, it felt almost impossible. I was just someone with a vision, an idea that music could tell stories in ways words alone couldn’t. But slowly, piece by piece, that vision became real. I poured myself into the writing, editing, and refining process.</p>
+
+  <p>Some days were incredibly tough. There were moments when self-doubt whispered that maybe this wasn’t good enough, or maybe I wasn’t ready. But I kept reminding myself why I started—because music has always been more than sound to me. It’s emotion, it’s storytelling, it’s connection. That reminder gave me the strength to stay focused.</p>
+
+  <hr>
+
+  <h2>A Month of Discipline and Focus</h2>
+  <p>The past month has been one of the most challenging yet rewarding periods of my life. I learned what it truly means to stay disciplined—balancing time, setting goals, and refusing to let distractions win. Every day was about pushing myself just a little further: polishing lyrics, experimenting with melodies, and imagining how each track could touch someone’s heart.</p>
+
+  <p>I didn’t allow myself to give up. Instead, I treated each setback as a lesson, and every small win as proof that I was moving in the right direction. That consistency—day after day—is what shaped this album into the best version of itself.</p>
+
+  <hr>
+
+  <h2>The Gift I Want to Share</h2>
+  <p>Now, as release day arrives, I don’t just see this album as my creation. I see it as a gift—for myself, for the people who have supported me, and most importantly, for you, the listener. Every song in this album carries meaning. Some are about strength, some about love, and some about quiet reflection. Together, they form a story I’m so proud to share.</p>
+
+  <p>This album is proof that dreams, no matter how distant they feel, are possible if you keep working at them. It’s more than music—it’s a reminder of resilience and hope.</p>
+
+  <hr>
+
+  <h2>Why This Matters to Me</h2>
+  <p>I often imagine someone out there, maybe far away, listening to one of these songs late at night and feeling understood. Maybe it will comfort them. Maybe it will inspire them. Maybe it will simply make their day better. If even one person feels that connection, then every hour I spent creating this was worth it.</p>
+
+  <p>For me, this debut isn’t just the start of a music journey—it’s a milestone of growth, of believing in myself, and of not letting fear hold me back.</p>
+
+  <hr>
+
+  <h2>Thank You</h2>
+  <p>To everyone who has encouraged me, even just by asking about my progress or reminding me that my words matter—thank you. Your support means more than I can ever put into words.</p>
+
+  <p>And to you, the one reading this right now: thank you for being here. The fact that you’re sharing this moment with me makes this release even more special.</p>
+
+  <blockquote>
+    <p>✨ My debut album is out now – 17th August 2025. I hope when you listen, you hear not just the music, but the heart and story behind it.</p>
+  </blockquote>
+</section>
+</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px 0;">
+
+  <div style="flex: 1 1 300px; max-width: 400px; border: 2px solid #ccc; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iokJXOsG9mM?si=aU_5dBV78B7PAyMZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div style="flex: 1 1 300px; max-width: 400px; border: 2px solid #ccc; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtwW3Mdui34?si=2h__fchrnbhdVdAq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div style="flex: 1 1 300px; max-width: 400px; border: 2px solid #ccc; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RrJmlWs1ofM?si=uheZgsCaX0CxyqJa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div style="flex: 1 1 300px; max-width: 400px; border: 2px solid #ccc; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gzQF0eSHAYQ?si=1-S8PVlMHxG02PhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+</div>
+
+
+    <div class="container post-nav">
+      <a href="blog1.html"><i class="fa-solid fa-chevron-left"></i> Previous Post</a>
+      <a href="#">Next Post <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div class="container author-box">
+      <img src="AUTHOR.jpg" alt="Author Photo">
+      <div>
+        <h3>Azlfa Fatima</h3>
+        <p>A teen writer with a passion for storytelling, growth, and sharing real-life writing journeys. Dreaming big, writing bigger.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+<!-- ================= FOOTER ================= -->
+    <footer class="custom-footer fade-up">
+      <div class="footer-top">
+        <h2>Azlfa Fatima</h2>
+        <div class="social-links">
+
+          <a href="https://www.instagram.com/glimmerofwords/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="https://www.pinterest.com/glimmerofwords"><img src="pinterest-round-white-icon.webp" alt="Pinterest"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/glimmerofwords/">Instagram Journey</a></li>
+            <li><a href="blog.html">Bonus Content</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-books">
+        <img src="footer1.jpg" alt="Keep Conncted" />
+        <img src="footer2.jpg" alt="Join news" />
+      </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="freebies.html">Freebies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="footer-quote">"You feel like sunlight through lace-soft, golden, and almost to beautiful to hold."</p>
+      <p class="copyright">&copy; 2025 Azlfa Fatima. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
