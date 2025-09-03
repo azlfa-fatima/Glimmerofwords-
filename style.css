@@ -508,7 +508,7 @@ body {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  width: 300px;
+  width: 250px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -937,4 +937,5 @@ button.glow:hover {
     height: auto;
   }
 }
+
 
