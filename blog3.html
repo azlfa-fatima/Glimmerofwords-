@@ -98,6 +98,154 @@
       .footer-content { flex-direction: column; align-items: center; text-align: center; }
       .footer-books img { height: 180px; margin: 0.5rem 0; }
     }
+
+        /* ✅ RESPONSIVE FIXES */
+/* ========================= */
+
+/* Keep header items on the same line */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  text-align: center;
+}
+header .meta {
+  flex-wrap: nowrap; /* force same line */
+  gap: 2rem;
+}
+
+/* Winners Table Responsive */
+.winners-table {
+  width: 100%;
+  font-size: 0.95rem;
+}
+.winners-table th, 
+.winners-table td {
+  padding: 0.8rem;
+}
+
+/* Poetry Cards Responsive */
+.poetry-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 95%;
+}
+
+/* Navigation Responsive */
+nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+}
+nav ul li {
+  flex: unset;
+}
+
+/* Footer Responsive */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-books img {
+  max-height: 200px;
+  width: auto;
+}
+
+/* ========================= */
+/* 📱 Mobile Specific */
+/* ========================= */
+@media (max-width: 768px) {
+  header {
+    padding: 2rem 1rem;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header .meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .img-section {
+    height: 220px;
+  }
+
+  .poem-card {
+    padding: 1.2rem;
+  }
+
+  .author-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .author-box img {
+    margin: 0 0 1rem 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-books img {
+    max-height: 150px;
+    margin: 0.5rem 0;
+  }
+}
+
+/* ========================= */
+/* 💻 Tablets (medium screens) */
+/* ========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+  .poetry-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ✅ Winners Table Ultra-Responsive */
+.winners-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem; /* slightly smaller for more fit */
+  line-height: 1.2; /* tighter row height */
+  table-layout: auto; /* allow flexible column widths */
+  word-wrap: break-word; /* wrap long words */
+  white-space: normal; /* wrap text instead of forcing one line */
+}
+.winners-table th,
+.winners-table td {
+  padding: 0.4rem; /* tighter padding */
+  text-align: left;
+  border: 1px solid #ddd;
+  vertical-align: top; /* keep text aligned neatly */
+}
+
+/* 📱 Mobile-specific (extra compact) */
+@media (max-width: 768px) {
+  .winners-table {
+    font-size: 0.7rem; /* smaller on mobile */
+    line-height: 1.1;
+  }
+  .winners-table th,
+  .winners-table td {
+    padding: 0.25rem; /* extra tight */
+  }
+}
+
+    
   </style>
 </head>
 <body>
@@ -477,3 +625,4 @@ You are also what’s becoming.
   </footer>
 </body>
 </html>
+
